@@ -6,6 +6,7 @@ interface ContentLayoutProps {
 }
 
 export function ContentLayout({ title, children }: ContentLayoutProps) {
+  console.log('inside content layout')
   return (
     <div>
       <Navbar title={title} />
