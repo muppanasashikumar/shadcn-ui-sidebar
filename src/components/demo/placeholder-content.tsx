@@ -59,9 +59,9 @@ export default function PlaceholderContent() {
     console.log({ values });
   };
   return (
-    <Card className="rounded-lg border-none mt-6">
+    <Card className="rounded-lg border-none">
       <CardContent className="p-6">
-        <div className="flex items-center min-h-[calc(100vh-56px-64px-20px-24px-56px-48px)]">
+        <div className="flex items-center">
           <div className="flex flex-col relative w-full">
             <Form {...form}>
               <form
