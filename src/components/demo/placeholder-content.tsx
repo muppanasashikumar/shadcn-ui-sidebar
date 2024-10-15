@@ -40,7 +40,8 @@ const formSchema = z
   });
 
 export default function PlaceholderContent() {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null); // Still using null here // State for date picker
+  const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(null); // Still using null here // State for date picker
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -142,9 +143,9 @@ export default function PlaceholderContent() {
                         <FormLabel>Start Date</FormLabel>
                         <FormControl>
                           <DatePicker
-                            selected={selectedDate}
+                            selected={selectedStartDate}
                             onChange={(date) => {
-                              setSelectedDate(date);
+                              setSelectedStartDate(date);
                               field.onChange(date);
                             }}
                             customInput={<Input id="datePicker" placeholder="Select a date" />}
@@ -166,9 +167,9 @@ export default function PlaceholderContent() {
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
                           <DatePicker
-                            selected={selectedDate}
+                            selected={selectedEndDate}
                             onChange={(date) => {
-                              setSelectedDate(date);
+                              setSelectedEndDate(date);
                               field.onChange(date);
                             }}
                             customInput={<Input id="datePicker" placeholder="Select a date" />}
