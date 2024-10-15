@@ -5,13 +5,15 @@ import {
   Bookmark,
   SquarePen,
   LayoutGrid,
-  LucideIcon
+  LucideIcon,
+  Circle
 } from "lucide-react";
 
 type Submenu = {
   href: string;
   label: string;
   active: boolean;
+  icon: LucideIcon;
 };
 
 type Menu = {
@@ -42,58 +44,78 @@ export function getMenuList(pathname: string): Group[] {
       ]
     },
     {
-      groupLabel: "Contents",
+      groupLabel: "",
       menus: [
         {
           href: "",
-          label: "Posts",
+          label: "Floating Loan",
           active: pathname.includes("/posts"),
           icon: SquarePen,
           submenus: [
             {
               href: "/posts",
-              label: "All Posts",
-              active: pathname === "/posts"
+              label: "Dashboard",
+              active: pathname === "/posts",
+              icon: Circle
             },
             {
               href: "/posts/new",
-              label: "New Post",
-              active: pathname === "/posts/new"
+              label: "Add/Upload Transaction",
+              active: pathname === "/posts/new",
+              icon: Circle
+            },
+            {
+              href: "/posts/new",
+              label: "Transactionsn",
+              active: pathname === "/posts/new",
+              icon: Circle
+            },
+            {
+              href: "/posts/new",
+              label: "Approve Transactions",
+              active: pathname === "/posts/new",
+              icon: Circle
+            },
+            {
+              href: "/posts/new",
+              label: "Upload EMI Details",
+              active: pathname === "/posts/new",
+              icon: Circle
             }
           ]
         },
-        {
-          href: "/categories",
-          label: "Categories",
-          active: pathname.includes("/categories"),
-          icon: Bookmark,
-          submenus: []
-        },
-        {
-          href: "/tags",
-          label: "Tags",
-          active: pathname.includes("/tags"),
-          icon: Tag,
-          submenus: []
-        }
       ]
     },
     {
-      groupLabel: "Settings",
+      groupLabel: "",
       menus: [
         {
           href: "/users",
-          label: "Users",
+          label: "Car Conveyance",
           active: pathname.includes("/users"),
           icon: Users,
-          submenus: []
+          submenus: [
+            {
+              href: "/posts",
+              label: "Dashboard",
+              active: pathname === "/posts",
+              icon: Circle
+            },
+          ]
         },
         {
           href: "/account",
-          label: "Account",
+          label: "Retiral Perquisite",
           active: pathname.includes("/account"),
           icon: Settings,
-          submenus: []
+          submenus: [
+            {
+              href: "/posts",
+              label: "Dashboard",
+              active: pathname === "/posts",
+              icon: Circle
+            },
+          ]
         }
       ]
     }

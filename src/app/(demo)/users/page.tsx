@@ -14,7 +14,7 @@ import {
 export default function UsersPage() {
   return (
     <ContentLayout title="Users">
-      <Breadcrumb>
+      {/* <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -32,7 +32,7 @@ export default function UsersPage() {
             <BreadcrumbPage>Users</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
-      </Breadcrumb>
+      </Breadcrumb> */}
       <PlaceholderContent />
     </ContentLayout>
   );

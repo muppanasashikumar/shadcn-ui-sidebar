@@ -14,7 +14,7 @@ import {
 export default function DashboardPage() {
   return (
     <ContentLayout title="Dashboard">
-      <Breadcrumb>
+      {/* <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -26,7 +26,7 @@ export default function DashboardPage() {
             <BreadcrumbPage>Dashboard</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
-      </Breadcrumb>
+      </Breadcrumb> */}
       <PlaceholderContent />
     </ContentLayout>
   );

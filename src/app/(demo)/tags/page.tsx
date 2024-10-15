@@ -14,7 +14,7 @@ import {
 export default function TagsPage() {
   return (
     <ContentLayout title="Tags">
-      <Breadcrumb>
+      {/* <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -32,7 +32,7 @@ export default function TagsPage() {
             <BreadcrumbPage>Tags</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
-      </Breadcrumb>
+      </Breadcrumb> */}
       <PlaceholderContent />
     </ContentLayout>
   );
